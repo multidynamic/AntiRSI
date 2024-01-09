@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="18122"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21701"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -12,12 +13,12 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="21" userLabel="Preferences">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="173" y="348" width="495" height="428"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1175"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1512" height="950"/>
             <value key="minSize" type="size" width="213" height="107"/>
             <view key="contentView" id="2">
                 <rect key="frame" x="0.0" y="0.0" width="495" height="428"/>
@@ -27,7 +28,7 @@
                         <rect key="frame" x="17" y="300" width="461" height="122"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <view key="contentView" id="Hir-0f-SeO">
-                            <rect key="frame" x="3" y="3" width="455" height="104"/>
+                            <rect key="frame" x="4" y="5" width="453" height="102"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <slider toolTip="Time allowed before a micro break is issued." verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="205">
@@ -135,7 +136,7 @@
                         <rect key="frame" x="17" y="171" width="461" height="118"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <view key="contentView" id="Q3x-mP-etm">
-                            <rect key="frame" x="3" y="3" width="455" height="100"/>
+                            <rect key="frame" x="4" y="5" width="453" height="98"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" preferredMaxLayoutWidth="135" translatesAutoresizingMaskIntoConstraints="NO" id="208">
@@ -150,7 +151,7 @@
                                 <slider toolTip="Time allowed before work break is issued." verticalHuggingPriority="750" fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="209">
                                     <rect key="frame" x="157" y="54" width="168" height="25"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <sliderCell key="cell" continuous="YES" alignment="left" tag="2" minValue="20" maxValue="120" doubleValue="50" tickMarkPosition="below" numberOfTickMarks="11" sliderType="linear" id="463">
+                                    <sliderCell key="cell" continuous="YES" alignment="left" tag="2" minValue="10" maxValue="120" doubleValue="50" tickMarkPosition="below" numberOfTickMarks="11" sliderType="linear" id="463">
                                         <font key="font" size="12" name="Helvetica"/>
                                     </sliderCell>
                                     <connections>
@@ -340,7 +341,7 @@
                         <string key="toolTip">How the dock icon and idle time registration updates; Normal is once every second, recommended for slower computers. Smooth is three times every second, recommended for fast computers.</string>
                         <popUpButtonCell key="cell" type="push" title="Normal" bezelStyle="rounded" alignment="left" lineBreakMode="clipping" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="409" id="476">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" metaFont="menu"/>
                             <menu key="menu" title="OtherViews" id="413">
                                 <items>
                                     <menuItem title="Super Smooth" id="410"/>
@@ -544,36 +545,27 @@
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" preferredMaxLayoutWidth="262" translatesAutoresizingMaskIntoConstraints="NO" id="491">
-                    <rect key="frame" x="17" y="145" width="266" height="44"/>
+                    <rect key="frame" x="18" y="169" width="266" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Work Break" id="492">
-                        <font key="font" metaFont="system" size="36"/>
+                        <font key="font" size="42" name="HelveticaNeue-UltraLight"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </textFieldCell>
                 </textField>
                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" preferredMaxLayoutWidth="244" translatesAutoresizingMaskIntoConstraints="NO" id="370">
-                    <rect key="frame" x="35" y="62" width="248" height="17"/>
+                    <rect key="frame" x="25" y="93" width="248" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="next break in 0 minutes" id="483">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" red="0.52156866000000002" green="0.52156866000000002" blue="0.52156866000000002" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" preferredMaxLayoutWidth="90" translatesAutoresizingMaskIntoConstraints="NO" id="279">
-                    <rect key="frame" x="169" y="111" width="94" height="17"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="0:00" id="482">
-                        <font key="font" metaFont="system"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="next break in 0 minutes" id="483">
+                        <font key="font" size="15" name="HelveticaNeue-Light"/>
                         <color key="textColor" red="0.52156866000000002" green="0.52156866000000002" blue="0.52156866000000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <button verticalHuggingPriority="750" fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="261" customClass="AntiRSIButton">
-                    <rect key="frame" x="178" y="21" width="102" height="32"/>
+                    <rect key="frame" x="98" y="20" width="102" height="31"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                    <buttonCell key="cell" type="push" title="Postpone" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="481">
+                    <buttonCell key="cell" type="square" title="Postpone" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" inset="2" id="481">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
@@ -582,10 +574,20 @@
                     </connections>
                 </button>
                 <progressIndicator verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="260">
-                    <rect key="frame" x="8" y="83" width="284" height="20"/>
+                    <rect key="frame" x="18" y="117" width="262" height="20"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                 </progressIndicator>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" preferredMaxLayoutWidth="90" translatesAutoresizingMaskIntoConstraints="NO" id="279">
+                    <rect key="frame" x="129" y="144" width="40" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="0:00" id="482">
+                        <font key="font" size="16" name="HelveticaNeue-UltraLight"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
             </subviews>
+            <point key="canvasLocation" x="-129" y="-322"/>
         </customView>
         <menu title="Menu" id="343" userLabel="DockMenu">
             <items>
@@ -605,7 +607,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="450" y="382" width="267" height="288"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1175"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1512" height="950"/>
             <value key="minSize" type="size" width="213" height="107"/>
             <view key="contentView" id="434">
                 <rect key="frame" x="0.0" y="0.0" width="267" height="288"/>
@@ -658,6 +660,7 @@ http://tech.inhelsinki.nl/antrsi/</string>
                     </button>
                 </subviews>
             </view>
+            <point key="canvasLocation" x="346" y="-322"/>
         </window>
     </objects>
     <resources>
